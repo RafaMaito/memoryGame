@@ -1,0 +1,55 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  height: 80vh;
+  width: 100vw;
+  display: flex;
+}
+
+.cardMem {
+  width: 19%;
+  height: 35%;
+  margin: 10px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: 0.5s;
+}
+
+.cardMem img {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  position: absolute;
+  background: blue;
+}
+
+#start {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.96);
+  position: fixed;
+  z-index: 1;
+}
+#start:target {
+  display: none;
+}
+
+.box {
+  width: 25vw;
+  margin-left: 37.5vw;
+  margin-top: 30vh;
+}
+
+.cardMem.flip {
+  transform: rotateY(180deg);
+}
+
+.cardMem :first-child {
+  transform: rotateY(180deg);
+}

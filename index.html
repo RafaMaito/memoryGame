@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/css/style.css" />
+    <title>Memory Game</title>
+  </head>
+
+  <body>
+    <header>
+      <nav class="navbar navbar-dark bg-primary">
+        <span class="navbar-brand">Jogo da Memória </span>
+        <div>
+          <span class="navbar-brand"
+            >Potuação
+            <input
+              id="pointsInput"
+              type="number"
+              disabled
+              style="width: 5rem"
+            />
+          </span>
+
+          <span class="navbar-brand"
+            >Jogadas
+            <input id="movesInput" type="number" disabled style="width: 5rem" />
+          </span>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div id="start">
+        <div class="card text-center box position-absolute">
+          <div class="card-body">
+            <h5 class="card-title mt-3">Bem vindo ao Jogo da Memória</h5>
+            <p class="card-text mt-5">
+              Resumo do jogo: Você terá 2 segundo para memorizar a posição das
+              cartas, depois tera que encontar os pares.
+            </p>
+            <a
+              href="#start"
+              class="btn btn-primary mt-2"
+              id="startButton"
+              onclick="rememberCards()"
+              >Jogar</a
+            >
+          </div>
+        </div>
+      </div>
+      <div
+        class="container mt-5 d-flex flex-wrap align-items-center justify-content-center"
+        id="cardsBoard"
+      ></div>
+    </main>
+    <footer class="fixed-bottom text-center bg-dark text-white">
+      Project by Rafael Maito
+    </footer>
+    <script src="/js/script.js"></script>
+  </body>
+</html>
