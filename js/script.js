@@ -62,10 +62,13 @@ function compareCards(firstCard, secondCard) {
       secondCard.classList.remove('flip');
       firstCard.setAttribute('onclick', 'flipCard(event)');
       secondCard.setAttribute('onclick', 'flipCard(event)');
-    }, 1000);
+    }, 500);
   }
   if (points === 6) {
-    alert(`Parabéns você venceu`);
+    setTimeout(() => {
+      alert(`Parabéns você venceu com ${moves} jogadas`);
+      document.location.reload(true);
+    }, 500);
   }
 }
 function flipCard(event) {
